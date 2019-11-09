@@ -4,6 +4,8 @@ import MessagesContainer from './MessagesContainer.jsx';
 import NewsContainer from './NewsContainer.jsx';
 import SocialContainer from './SocialContainer.jsx';
 
+//This container was made to be a routing point from the main landing page
+
 const ContentContainer = () => {
     return ( 
         <React.Fragment>
