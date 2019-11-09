@@ -1,0 +1,46 @@
+{
+  "name": "verifire",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "dev": "NODE_ENV=development webpack-dev-server --open & nodemon ./server/server.js",
+    "build": "NODE_ENV=production webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "node-fetch": "^2.6.0",
+    "node-sass": "^4.13.0",
+    "path": "^0.12.7",
+    "pg": "^7.12.1",
+    "popper.js": "^1.16.0",
+    "react": "^16.11.0",
+    "react-animate-on-scroll": "^2.1.5",
+    "react-bootstrap": "^1.0.0-beta.14",
+    "react-dom": "^16.11.0",
+    "reactstrap": "^8.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "babel-loader": "^8.0.6",
+    "concurrently": "^5.0.0",
+    "css-loader": "^3.2.0",
+    "http-server": "^0.11.1",
+    "nodemon": "^1.19.4",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
