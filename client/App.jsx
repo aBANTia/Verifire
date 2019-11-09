@@ -1,4 +1,5 @@
 import React from  "react";
+
 import MainContainer from "./containers/MainContainer.jsx";
 
 //We used functional components throughout the application so we could utilize hooks
@@ -8,10 +9,9 @@ import MainContainer from "./containers/MainContainer.jsx";
     //note that there is no render() method as the implicit method in a functional component is render()
 //We didn't instantiate state at the parent level because none of the state we use relates to other components
 
-
-const App = () => {
+const App = () => {  
     return (
-        <MainContainer/>
+        <MainContainer />
       );
 }
  
