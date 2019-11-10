@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM, { render } from 'react-dom';
 import App from './App.jsx';
+import styles from './assets/styles.scss';
 
 //by using createRoot here we are onboarding concurrent mode in the experimental react version
 
