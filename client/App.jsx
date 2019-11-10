@@ -1,4 +1,6 @@
 import React from  "react";
+
+//react-bootstrap has pre-made css files that tidy up a little from default
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles.scss'
 
@@ -16,5 +18,6 @@ const App = () => {
         <MainContainer />
       );
 }
+
  
 export default App;

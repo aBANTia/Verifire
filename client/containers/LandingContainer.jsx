@@ -1,5 +1,6 @@
 import React from 'react';
 import Login from '../components/Login.jsx'
+import SignUp from '../components/SignUp.jsx'
 
 //This container was made to display the landing page
 //Ideally this will also contain auth and other things
