@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Aeris JavaScript SDK - Interactive Map Animation</title>
+    <script defer src="https://cdn.aerisapi.com/sdk/js/latest/aerisweather.min.js"></script>
+
+    <style>
+    #map {
+        height: 600px;
+    }
+    .map-container {
+        margin: 30px auto;
+        width: 800px;
+    }
+    </style>
+
+</head>
+<body>
+
+<div class="map-container">
+    <div id="map"></div>
+</div>
+
+<script>
+
+    window.onload = () => {
+
+        const aeris = new AerisWeather('wgE96YE3scTQLKjnqiMsv', 'iSUGNlzI2maa6Whv4trM8lXvmuHE4w2QAz3XyQrC');
+
+        aeris.views().then(views => {
+            const map = new views.InteractiveMap(document.getElementById('map'), {
+                center: {
+                    lat: 34.0527,
+                    lon: -118.2458
+                },
+                zoom: 8,
+                layers: 'flat,chlo-modis,interstates,counties,heat-index:60,admin-cities,fires-obs-icons',
+                timeline: {
+                    from: -2 * 3600, // seconds
+                    to: 0 * 3600
+                }
+            });
+        });
+    };
+
+</script>
+
+</body>
+</html>

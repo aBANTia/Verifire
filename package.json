@@ -6,15 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
-    "build": "NODE_ENV=production webpack",
-    "dev": "NODE_ENV=development webpack-dev-server --open & nodemon server/server.js || true"
+    "build": "cross-env NODE_ENV=production webpack",
+    "dev": "concurrently \"cross-env NODE_ENV=development webpack-dev-server --open\" \"cross-env nodemon server/server.js || true\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.0",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
+    "cross-env": "^6.0.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "node-fetch": "^2.6.0",
@@ -22,10 +25,11 @@
     "path": "^0.12.7",
     "pg": "^7.12.1",
     "popper.js": "^1.16.0",
-    "react": "^16.11.0",
+    "react": "0.0.0-experimental-38dd17ab9",
+    "puppeteer": "^2.0.0",
     "react-animate-on-scroll": "^2.1.5",
     "react-bootstrap": "^1.0.0-beta.14",
-    "react-dom": "^16.11.0",
+    "react-dom": "0.0.0-experimental-38dd17ab9",
     "reactstrap": "^8.1.1"
   },
   "devDependencies": {
