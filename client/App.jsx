@@ -1,4 +1,6 @@
 import React from  "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/styles.scss'
 
 import MainContainer from "./containers/MainContainer.jsx";
 

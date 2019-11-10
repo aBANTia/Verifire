@@ -9,7 +9,7 @@ import axios from 'axios'
 
 const NewsContainer = () => {
     //initializing a hook that utitlizes a route that scrapes data as a nested array
-    const [news, newsUpdate] = useState([[{title:'article', link:'google.com'}],[{title:'article diff', link:'google.com'}],[{title:'article dif', link:'google.com'}]]);
+    const [news, newsUpdate] = useState([[{title:'article', link:'google.com'}],[{title:'news', link:'google.com'}],[{title:'potato', link:'google.com'}]]);
     //initializing a hook to allow for conditional rendering
     const [tabs, tabsChange] = useState(1)
 
@@ -42,23 +42,26 @@ const NewsContainer = () => {
             newsUpdate(data)
         })
     }
+
     //splitting up the different components to be flipped through
+    //made tabs and images that are both clickable to alter state that renders different components
     return ( 
         <React.Fragment>
             <div id="tabs">
                 <div className="tabs">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Seal_of_the_Los_Angeles_Fire_Department.png" onClick={()=>tabsChange(1)}/>
-                    <input type="button" value="LAFD" onClick={()=>tabsChange(1)}/>
+                    <img className="logos" src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Seal_of_the_Los_Angeles_Fire_Department.png" onClick={()=>tabsChange(1)}/>
+                    <div value="LAFD" onClick={()=>tabsChange(1)}>LAFD</div>
                 </div>
                 <div className="tabs">
-                    <img src="https://png.pngtree.com/template/20190716/ourmid/pngtree-youtube-red-play-button-free-png-image_227909.jpg" onClick={()=>tabsChange(2)}/>
-                    <input type="button" value="Youtube" onClick={()=>tabsChange(2)}/>
+                    <img className="logos" src="https://png.pngtree.com/template/20190716/ourmid/pngtree-youtube-red-play-button-free-png-image_227909.jpg" onClick={()=>tabsChange(2)}/>
+                    <div value="Youtube" onClick={()=>tabsChange(2)}/>
                 </div>
                 <div className="tabs">
-                    <img src="https://avatars2.githubusercontent.com/u/320671?s=280&v=4" onClick={()=>tabsChange(3)}/>
-                    <input type="button" value="LA Times" onClick={()=>tabsChange(3)}/>
+                    <img className="logos" src="https://avatars2.githubusercontent.com/u/320671?s=280&v=4" onClick={()=>tabsChange(3)}/>
+                    <div value="LA Times" onClick={()=>tabsChange(3)}/>
                 </div>
             </div>
+            <h2>News</h2>
             {newsTab}
         </React.Fragment>
      );
