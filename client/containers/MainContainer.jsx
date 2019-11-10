@@ -1,13 +1,18 @@
 import React from 'react';
 import ContentContainer from './ContentContainer.jsx';
 import LandingContainer from './LandingContainer.jsx';
+
 //we utilized react-bootstrap to style our page with pre-made components
 import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+
 //we imported the next set to utilize react-router as we wanted to route in a landing page
 import {
     BrowserRouter as Router,
     Switch,
     Route,
+    NavLink,
+    Link,
   } from "react-router-dom";
 
 //We created a main container preferentially as to carry our other containers
@@ -23,7 +28,7 @@ const MainContainer = () => {
         <article id ="mainContainer">
             <Router>
              <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href='/'>
+                <Navbar.Brand>
                 <img
                     alt=""
                     src="https://www.clipartwiki.com/clipimg/detail/120-1200936_fire-clipart-safty-transparent-background-animated-fire.png"
@@ -31,20 +36,23 @@ const MainContainer = () => {
                     height="30"
                     className="d-inline-block align-top"
                 />
-                {' Verfire'}
+                <Link to="/">Verifire</Link>
                 </Navbar.Brand>
+                <NavLink to="/main">Content</NavLink>
             </Navbar>
             <Switch>
-          <Route path="/">
-            <LandingContainer/>
-          </Route>
           <Route path="/main">
             <ContentContainer/>
           </Route>
-        </Switch>
+          <Route path="/">
+            <LandingContainer/>
+          </Route>
+          </Switch>
         </Router>
         </article>
      );
 }
+
+//
  
 export default MainContainer;
