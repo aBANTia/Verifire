@@ -15,6 +15,9 @@ app.get('/news', (req, res) => {
     res.sendStatus(404);    
 })
 
+// Serve build
+app.use('/build', express.static(path.join(__dirname, '../build')));
+
 //404 handler
 app.use('*', (req, res) => {
     res.sendStatus(404);
