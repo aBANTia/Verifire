@@ -12,7 +12,7 @@ const LandingContainer = (props) => {
         <div id="landing">
             <div id="landingInfo">
 
-                <h2>Verifire</h2>
+                <h2>Verifire:</h2>
                 <span>Keep Up With The Heat</span>
                 <p>Stay updated, know your coverage, and keep connected</p>
             </div>
@@ -22,7 +22,7 @@ const LandingContainer = (props) => {
                     "fps_limit": 60,
                     "particles": {
                         "number": {
-                            "value": 600,
+                            "value": 400,
                             "density": {
                                 "enable": false
                             }
