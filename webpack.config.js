@@ -29,7 +29,6 @@ module.exports = {
         proxy: {
             '/': 'http://localhost:3000',
             '/news': 'http://localhost:3000/news',
-            '/1': 'http://localhost:3000/1'
         }   
     }
 }
