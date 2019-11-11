@@ -1,0 +1,93 @@
+//NewsContianer styling
+#tabs {
+    display: flex;
+    height: 50px;
+
+}
+
+.tabs {
+    display: flex;
+    height: 50px;
+}
+
+.logos {
+    width: 50px;
+}
+
+//MainContainer Styling
+
+.navLinks:hover {
+    color: lightcoral;
+    text-decoration: none;
+}
+
+.navLinks {
+    color: white;
+}
+
+
+//landing page styles
+#landing {
+    display:flex;
+    height: 90vh;
+    width: 100vw;
+    background: linear-gradient(135deg, orange, black);
+    align-items: center;
+    h2 {
+        color:white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+    } 
+    p {
+        color: whitesmoke;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+    }
+    #company {
+        align-self: flex-end;
+    }
+}
+
+#particles {
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 40px repeat(8, 2fr) 40px;
+    grid-template-rows: 40px repeat(8, 2fr) 40px;
+    height: 90vh;
+    width: 100vw;
+    #news {
+        border:black solid 1px;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 7;
+    }
+    #map {
+        border:black solid 1px;
+        grid-column-start: 7;
+        grid-column-end: 10;
+        grid-row-start: 2;
+        grid-row-end: 7;
+    }
+    #social {
+        border:black solid 1px;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 8;
+        grid-row-end: 10;
+    }
+    #messages {
+        border:black solid 1px;
+        grid-column-start: 6;
+        grid-column-end: 10;
+        grid-row-start: 8;
+        grid-row-end: 10;
+    }
+
+}

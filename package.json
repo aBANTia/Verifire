@@ -25,11 +25,13 @@
     "path": "^0.12.7",
     "pg": "^7.12.1",
     "popper.js": "^1.16.0",
-    "react": "0.0.0-experimental-38dd17ab9",
     "puppeteer": "^2.0.0",
+    "react": "0.0.0-experimental-38dd17ab9",
     "react-animate-on-scroll": "^2.1.5",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "0.0.0-experimental-38dd17ab9",
+    "react-particles-js": "^2.7.0",
+    "react-router-dom": "^5.1.2",
     "reactstrap": "^8.1.1"
   },
   "devDependencies": {
