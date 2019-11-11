@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 //This component was built to view social media feeds of government accounts
@@ -6,23 +6,27 @@ import axios from 'axios';
 //Eventually it could be possible to tie in OAuth into here to be able to post from within the app
 
 const Social = (props) => {
-    let social;
+    const [social, socialUpdate] = useState([[{title:'Loading...', link:'google.com'}],[{title:'Loading...', link:'google.com'}],[{title:'Loading...', link:'google.com'}]]);
+    
     useEffect(() => {
         // Fetch the social
-        axios.get('/alerts')
-        .then(data => {
-            console.log(data)
-            // social = data.map((el, i) => {
-            //     return <a key={i} href={el.link}>{el.title}</a>
-            // })
+        fetch('/alerts')
+        .then(res => {
+            return res.json();
         })
-    });
+        .then(res => {
+            console.log(res)
+            socialUpdate([...res])
+        })
+    }, []);
     
+    const alerts = social.map((el, i) => {
+        return <a key={i} href={el.link}>{el.title}</a>
+    })
 
     return ( 
         <div>
-            <p>Social</p>
-            {/* {social} */}
+            {alerts}
         </div>
     );
 }
