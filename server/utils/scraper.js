@@ -43,19 +43,20 @@ const scrapeLAFDAlerts = async () => {
 const scrapeLATimes = async () => {
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
-    await page.goto('https://www.latimes.com/topic/fires')
-    const scrapedData = await page.evaluate(() =>
-        Array.from(
-            document.querySelectorAll('.PromoLarge-title a:first-child')
+    await page.goto('https://www.latimes.com/search?q=fire&f0=00000163-01e2-d9e5-adef-33e2984a0000&f0=0000016a-b70e-dd5c-abfe-bf3f7b290000&f0=00000168-8692-d5d8-a76d-efdb7d3c0000&f1=0000016a-ea2d-db5d-a57f-fb2dc8680000&s=0')
+    const scrapedData = await page.evaluate(() => {
+        return Array.from(
+            document.querySelectorAll('.PromoMedium-title a:first-child')
         )
         .map(link => ({
             title: link.textContent,
             link: link.getAttribute('href')
         }))
-    )
+    })
     await browser.close()
     return scrapedData
 }
+
 
 //scraping Youtube titles and links
 const scrapeYoutube = async () => {
