@@ -4,6 +4,7 @@ const path = require('path');
 const PORT = 3000;
 
 const newsController = require('./controllers/newsController');
+const messageController = require('./controllers/messageController');
 
 app.use(express.json());
 app.use(express.static('assets'))
@@ -36,6 +37,19 @@ app.get('/alerts', newsController.getAlerts, (req, res) => {
 });
 
 app.use('/build', express.static(path.join(__dirname, '../build')));
+
+
+//chat start
+//get the messages from the database to display them
+app.get('/messages', messageController.getMessages, (req, res) => {
+  res.json(res.locals.messages);
+})
+//post the messages to the database
+app.post('/messages', messageController.postMessages, (req, res) => {
+  res.json(res.locals.message);
+})
+//chat end
+
 
 //404 handler
 app.use('*', (req, res) => {
