@@ -9,38 +9,34 @@ import axios from 'axios'
 
 const NewsContainer = () => {
     //initializing a hook that utitlizes a route that scrapes data as a nested array
-    const [news, newsUpdate] = useState([[{title:'article', link:'google.com'}],[{title:'news', link:'google.com'}],[{title:'potato', link:'google.com'}]]);
+    const [news, newsUpdate] = useState([[{title:'Loading...', link:'google.com'}],[{title:'Loading...', link:'google.com'}],[{title:'Loading...', link:'google.com'}]]);
     //initializing a hook to allow for conditional rendering
     const [tabs, tabsChange] = useState(1)
 
-    //upon rendering, the fetch will occur and the hook 'newsUpdate' should update the state
-    // useEffect(() => {
-    //     axios.get('/news')
-    //     .then(data => {
-    //         newsUpdate(data)
-    //     })
-    // })
+    // upon rendering, the fetch will occur and the hook 'newsUpdate' should update the state
+    useEffect(() => {
+        fetch('/news')
+        .then(resp => {
+            return resp.json()})
+        .then(data => {
+            newsUpdate([...data])
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    },[])
     
 
     //conditional rendering for different states based on user input to render differnet news sources
     let newsTab;
     if (tabs === 1) {
-        newsTab = <News1 news={news} handleClick={handleClick}/>
+        newsTab = <News1 news={news}/>
     }
     if (tabs === 2) {
-        newsTab = <News2 news={news} handleClick={handleClick}/>
+        newsTab = <News2 news={news}/>
     }
     if (tabs === 3) {
-        newsTab = <News3 news={news} handleClick={handleClick}/>
-    }
-
-    //creating a method that on click, handles the event of updating the state by fetching more information
-    //Just like class constructors, this method needs to be initialized where the state is
-    const handleClick = () => {
-        axios.get('/news')
-        .then(data => {
-            newsUpdate(data)
-        })
+        newsTab = <News3 news={news}/>
     }
 
     //splitting up the different components to be flipped through
@@ -61,7 +57,6 @@ const NewsContainer = () => {
                     <div value="LA Times" onClick={()=>tabsChange(3)}/>
                 </div>
             </div>
-            <h2>News</h2>
             {newsTab}
         </div>
      );
