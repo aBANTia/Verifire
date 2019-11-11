@@ -6,7 +6,10 @@ import Social from '../components/Social.jsx';
 
 const SocialContainer = (props) => {
     return ( 
-        <Social/>
+        <div id="social">
+            <Social/>
+        </div>
+        
      );
 }
  

@@ -8,12 +8,12 @@ import SocialContainer from './SocialContainer.jsx';
 
 const ContentContainer = () => {
     return ( 
-        <React.Fragment>
+        <div id="content">
             <NewsContainer/>
             <SocialContainer/>
             <MapsContainer/>
             <MessagesContainer/>
-        </React.Fragment>
+        </div>
      );
 }
  
