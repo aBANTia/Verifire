@@ -11,6 +11,7 @@ const LandingContainer = (props) => {
     return ( 
         <div id="landing">
             <div id="landingInfo">
+
                 <h2>Verifire</h2>
                 <span>Keep Up With The Heat</span>
                 <p>Stay updated, know your coverage, and keep connected</p>
@@ -46,12 +47,12 @@ const LandingContainer = (props) => {
                     },
                     "polygon": {
                         "enable": true,
-                        "scale": 0.6,
+                        "scale": 0.55,
                         "type": "inside",
                         "move": {
                             "radius": 5
                         },
-                        "url":"client/assets/flare.svg" ,
+                        "url":"/flare",
                         "inline": {
                             "arrangement": "equidistant"
                         },

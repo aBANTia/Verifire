@@ -13,11 +13,16 @@ const Maps = (props) => {
                 lon: -118.2458
             },
             zoom: 8,
-            layers: 'flat,chlo-modis,interstates,counties,heat-index:60,admin-cities,fires-obs-icons',
+            // layers: 'flat,chlo-modis,interstates,counties,heat-index:60,admin-cities,fires-obs-icons',
+            layers: 'heat-index:60,fires-obs-icons',
             timeline: {
                 from: -2 * 3600, // seconds
                 to: 0 * 3600
             }
+            // timeline: {
+            //     from: -24 * 3600, // seconds
+            //     to: -22 * 3600
+            // }
         });
     });
 

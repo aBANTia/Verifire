@@ -8,11 +8,15 @@ const newsController = require('./controllers/newsController');
 app.use(express.json());
 app.use(express.static('assets'))
 
+
 app.get('/', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, '../index.html'));
 });
 
-
+// Serve Particle SVG
+app.get('/flare', (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, '../client/assets/flare.svg'));
+});
 // '/news' route will respond with a nested array of arrays,
     //each nested array contains scraped data from sources LAFD, LA Times, and Youtube (respectively)
     //structured as follows:
@@ -30,13 +34,6 @@ app.get('/news', newsController.getNews, (req, res) => {
 app.get('/alerts', newsController.getAlerts, (req, res) => {
   res.json(res.locals.alerts);
 });
-
-app.use('/1', (req,res) => {
-  res.status(200).send('hello')
-})
-
-//serving /build/ folder
-app.use('/build', express.static(path.join(__dirname, '../build')));
 
 // Serve build
 app.use('/build', express.static(path.join(__dirname, '../build')));
