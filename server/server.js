@@ -33,6 +33,9 @@ app.get('/alerts', newsController.getAlerts, (req, res) => {
 //serving /build/ folder
 app.use('/build', express.static(path.join(__dirname, '../build')));
 
+// Serve build
+app.use('/build', express.static(path.join(__dirname, '../build')));
+
 //404 handler
 app.use('*', (req, res) => {
     res.sendStatus(404);

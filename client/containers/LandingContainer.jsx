@@ -13,21 +13,21 @@ const LandingContainer = (props) => {
             <div id="particles">
             <Particles
                 params={{
-                    "fps_limit": 28,
+                    "fps_limit": 60,
                     "particles": {
                         "number": {
-                            "value": 500,
+                            "value": 600,
                             "density": {
                                 "enable": false
                             }
                         },
                         "line_linked": {
                             "enable": true,
-                            "distance": 30,
+                            "distance": 20,
                             "opacity": 0.4
                         },
                         "move": {
-                            "speed": 1
+                            "speed": 10
                         },
                         "opacity": {
                             "anim": {
@@ -41,17 +41,17 @@ const LandingContainer = (props) => {
                     },
                     "polygon": {
                         "enable": true,
-                        "scale": 0.5,
-                        "type": "inline",
+                        "scale": 0.6,
+                        "type": "inside",
                         "move": {
-                            "radius": 10
+                            "radius": 5
                         },
-                        "url":"client/assets/deer.svg" ,
+                        "url":"client/assets/flare.svg" ,
                         "inline": {
                             "arrangement": "equidistant"
                         },
                         "draw": {
-                            "enable": true,
+                            "enable": false,
                             "stroke": {
                                 "color": "rgba(255, 255, 255, .2)"
                             }
