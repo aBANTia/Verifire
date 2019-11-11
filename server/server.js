@@ -27,7 +27,8 @@ app.get('/flare', (req, res) => {
     // ]
 
 app.get('/news', newsController.getNews, (req, res) => {
-  res.json(res.locals.allNews);
+  console.log("news route sending data")
+  res.status(200).json(res.locals.allNews);
 });
 // '/alerts' route will respond with an array of alerts from LAFD: {title: 'Alert', link: 'www.alertLink.com'}
 app.get('/alerts', newsController.getAlerts, (req, res) => {

@@ -28,6 +28,7 @@ module.exports = {
         publicPath: '/build',
         proxy: {
             '/': 'http://localhost:3000',
+            '/news': 'http://localhost:3000/news',
         }   
     }
 }
