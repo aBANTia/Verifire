@@ -15,9 +15,9 @@ app.get('/', (req, res) => {
     //each nested array contains scraped data from sources LAFD, LA Times, and Youtube (respectively)
     //structured as follows:
     // [
-    //     [ { title: 'LAFD Title', link: 'LAFD.com' } ],
-    //     [ { title: 'LA Times Title', link: 'LATimes.com' } ],
-    //     [ { title: 'Youtube Title', link: 'youtube.com' } ]
+    //     [ { title: 'LAFD Title', link: 'LAFD.com', picture: 'piclink.com' } ],
+    //     [ { title: 'LA Times Title', link: 'LATimes.com', picture: 'piclink.com' } ],
+    //     [ { title: 'Youtube Title', link: 'youtube.com', picture: 'piclink.com' } ]
     // ]
 
 app.get('/news', newsController.getNews, (req, res) => {

@@ -45,7 +45,6 @@ newsController.getNews = (req, res, next) => {
 //getAlerts middleware scrapes top alerts from LAFD
   //this returns a single array of objects; not nested as returned by .getNews, as it's only scraping from one source
 newsController.getAlerts = (req, res, next) => {
-  //SERVING UP LAFD alerts
   const LAFDAlerts = new Promise((resolve, reject) => {
     scraper
       .scrapeLAFDAlerts()
@@ -54,6 +53,7 @@ newsController.getAlerts = (req, res, next) => {
       })
       .catch(err => reject('LAFD alerts scrape failed'))
   })
+  
   Promise.all([ LAFDAlerts ])
     .then(data => {
       res.locals.alerts = data[0];
