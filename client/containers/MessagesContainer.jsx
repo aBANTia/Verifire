@@ -6,7 +6,9 @@ import Messages from '../components/Messages.jsx';
 
 const MessagesContainer = (props) => {
     return ( 
-        <Messages/>
+        <div id="messages">
+            <Messages/>
+        </div>
      );
 }
  
