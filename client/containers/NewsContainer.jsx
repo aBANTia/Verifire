@@ -30,23 +30,13 @@ const NewsContainer = () => {
     //conditional rendering for different states based on user input to render differnet news sources
     let newsTab;
     if (tabs === 1) {
-        newsTab = <News1 news={news} handleClick={handleClick}/>
+        newsTab = <News1 news={news}/>
     }
     if (tabs === 2) {
-        newsTab = <News2 news={news} handleClick={handleClick}/>
+        newsTab = <News2 news={news}/>
     }
     if (tabs === 3) {
-        newsTab = <News3 news={news} handleClick={handleClick}/>
-    }
-
-    //creating a method that on click, handles the event of updating the state by fetching more information
-    //Just like class constructors, this method needs to be initialized where the state is
-    const handleClick = () => {
-        axios.get('/news')
-        .then(data => {
-            console.log('fetching on the user input')
-            newsUpdate(data)
-        })
+        newsTab = <News3 news={news}/>
     }
 
     //splitting up the different components to be flipped through

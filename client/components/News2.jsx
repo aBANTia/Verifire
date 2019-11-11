@@ -15,7 +15,6 @@ const News2 = ({news, handleClick}) => {
     return ( 
         <section className="news" id="news2">
             {articles}
-            <input type="button" onClick={handleClick} value="Refresh for articles"/>
         </section>
      );
 }
