@@ -5,11 +5,15 @@ import Particles from 'react-particles-js'
 //Ideally this will also contain auth and other things
 //This will primarily be to display information regarding the site as a whole
 
-//the particles in this container is 
+//the particles in this container are for the polygon mask before entering the page
 
 const LandingContainer = (props) => {
     return ( 
         <div id="landing">
+            <div id="landingInfo">
+                <h2>Verifire: Keep Up With The Heat</h2>
+                <p>Keep up with all the news, know your coverage, and stay connected</p>
+            </div>
             <div id="particles">
             <Particles
                 params={{
@@ -74,6 +78,7 @@ const LandingContainer = (props) => {
                     }
                 }} />
                 </div>
+                <p id="company">by aBANTia</p>
         </div>
      );
 }

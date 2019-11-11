@@ -25,15 +25,37 @@
     color: white;
 }
 
+
+//landing page styles
 #landing {
+    display:flex;
     height: 100%;
     width: 100%;
     background: linear-gradient(135deg, orange, black);
+    align-items: center;
+    h2 {
+        color:white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+    } 
+    p {
+        color: whitesmoke;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+    }
+    #company {
+        align-self: flex-end;
+    }
 }
 
 #particles {
-    width: 80vw;
+    width: 40vw;
     height: 100vh;
     display: flex;
     justify-content: flex-end;
+}
+
+#content {
+    display: grid;
+    
 }
