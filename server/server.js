@@ -6,10 +6,12 @@ const PORT = 3000;
 const newsController = require('./controllers/newsController');
 
 app.use(express.json());
+app.use(express.static('assets'))
 
 app.get('/', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, '../index.html'));
 });
+
 
 // '/news' route will respond with a nested array of arrays,
     //each nested array contains scraped data from sources LAFD, LA Times, and Youtube (respectively)
