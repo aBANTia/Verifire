@@ -4,7 +4,7 @@ const newsController = {};
 
 //getNews middleware scrapes titles and links from source sites, as specified in server.js
 newsController.getNews = (req, res, next) => {
-  //SERVING UP LAFD headlines / links
+  //SERVING UP LAFD headlines / links / pictures (respectively)
   const LAFDArticles = new Promise((resolve, reject) => {
     scraper
       .scrapeLAFD()
@@ -14,7 +14,7 @@ newsController.getNews = (req, res, next) => {
       .catch(err => reject('LAFD scrape failed'))
   })
 
-  //SERVING UP LA Times headlines / links
+  //SERVING UP LA Times headlines / links / pictures (respectively)
   const LATimesArticles = new Promise((resolve, reject) => {
     scraper
       .scrapeLATimes()
@@ -22,9 +22,9 @@ newsController.getNews = (req, res, next) => {
         resolve(data)
       })
       .catch(err => reject('LA Times scrape failed'))
-    })
+  })
 
-  //SERVING UP Youtube headlines / links
+  //SERVING UP Youtube headlines / links / pictures (respectively)
   const youtubeVideos = new Promise((resolve, reject) => {
     scraper
       .scrapeYoutube()
