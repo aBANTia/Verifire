@@ -5,10 +5,12 @@ const PORT = 3000;
 
 //JSON parser
 app.use(express.json());
+app.use(express.static('assets'))
 
 app.get('/', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, '../index.html'));
 });
+
 
 app.get('/news', (req, res) => {
     //currently working on web scraping middleware
