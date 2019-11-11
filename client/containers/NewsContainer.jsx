@@ -13,13 +13,18 @@ const NewsContainer = () => {
     //initializing a hook to allow for conditional rendering
     const [tabs, tabsChange] = useState(1)
 
-    //upon rendering, the fetch will occur and the hook 'newsUpdate' should update the state
-    // useEffect(() => {
-    //     axios.get('/news')
-    //     .then(data => {
-    //         newsUpdate(data)
-    //     })
-    // })
+    // upon rendering, the fetch will occur and the hook 'newsUpdate' should update the state
+    useEffect(() => {
+        fetch('/news')
+        .then(resp => {
+            return resp.json()})
+        .then(data => {
+            newsUpdate([...data])
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    },[])
     
 
     //conditional rendering for different states based on user input to render differnet news sources
@@ -39,6 +44,7 @@ const NewsContainer = () => {
     const handleClick = () => {
         axios.get('/news')
         .then(data => {
+            console.log('fetching on the user input')
             newsUpdate(data)
         })
     }
