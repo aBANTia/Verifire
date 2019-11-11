@@ -13,3 +13,27 @@
 .logos {
     width: 50px;
 }
+
+//MainContainer Styling
+
+.navLinks:hover {
+    color: lightcoral;
+    text-decoration: none;
+}
+
+.navLinks {
+    color: white;
+}
+
+#landing {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, orange, black);
+}
+
+#particles {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+}

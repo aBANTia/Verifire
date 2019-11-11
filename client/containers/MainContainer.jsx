@@ -4,7 +4,6 @@ import LandingContainer from './LandingContainer.jsx';
 
 //we utilized react-bootstrap to style our page with pre-made components
 import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
 
 //we imported the next set to utilize react-router as we wanted to route in a landing page
 import {
@@ -36,9 +35,9 @@ const MainContainer = () => {
                     height="30"
                     className="d-inline-block align-top"
                 />
-                <Link to="/">Verifire</Link>
+                <Link className="navLinks" to="/">Verifire</Link>
                 </Navbar.Brand>
-                <NavLink to="/main">Content</NavLink>
+                <NavLink className="navLinks" to="/main">Content</NavLink>
             </Navbar>
             <Switch>
           <Route path="/main">
