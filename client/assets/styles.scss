@@ -12,16 +12,24 @@
 //NewsContianer styling
 #tabs {
     display: flex;
-    height: 50px;
 }
 
 .tabs {
     display: flex;
-    height: 50px;
+    height: 25px;
+    padding-right: 30px;
+    border-right: solid orange 1px;
+    div {
+        color: white;
+    }
 }
 
+.tabs:hover {
+    background: lightcoral;
+  }
+
 .logos {
-    width: 50px;
+    width: 25px;
 }
 
 .news {
@@ -30,8 +38,21 @@
     overflow: auto;
 }
 
+.pair {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.picture {
+   height: 100px;
+   width: 100px;
+   margin-left: 10px;
+}
+
 .newsEntry {
-    color: whitesmoke
+    color: whitesmoke;
+    padding: 10px;
 }
 
 hr {
