@@ -45,12 +45,12 @@ const LandingContainer = (props) => {
                     },
                     "polygon": {
                         "enable": true,
-                        "scale": 0.6,
+                        "scale": 0.55,
                         "type": "inside",
                         "move": {
                             "radius": 5
                         },
-                        "url":"client/assets/flare.svg" ,
+                        "url":"/flare",
                         "inline": {
                             "arrangement": "equidistant"
                         },
