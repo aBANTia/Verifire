@@ -46,7 +46,7 @@ const NewsContainer = () => {
     //splitting up the different components to be flipped through
     //made tabs and images that are both clickable to alter state that renders different components
     return ( 
-        <React.Fragment>
+        <div id="news">
             <div id="tabs">
                 <div className="tabs">
                     <img className="logos" src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Seal_of_the_Los_Angeles_Fire_Department.png" onClick={()=>tabsChange(1)}/>
@@ -63,7 +63,7 @@ const NewsContainer = () => {
             </div>
             <h2>News</h2>
             {newsTab}
-        </React.Fragment>
+        </div>
      );
 }
  
