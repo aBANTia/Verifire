@@ -24,6 +24,21 @@
     width: 50px;
 }
 
+.news {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.newsEntry {
+    border: solid lightsalmon 1px;
+}
+
+#news {
+    display: flex;
+    flex-direction: column;
+}
+
 //MainContainer Styling
 
 .navLinks:hover {

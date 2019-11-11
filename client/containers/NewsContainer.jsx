@@ -9,7 +9,7 @@ import axios from 'axios'
 
 const NewsContainer = () => {
     //initializing a hook that utitlizes a route that scrapes data as a nested array
-    const [news, newsUpdate] = useState([[{title:'article', link:'google.com'}],[{title:'news', link:'google.com'}],[{title:'potato', link:'google.com'}]]);
+    const [news, newsUpdate] = useState([[{title:'Loading...', link:'google.com'}],[{title:'Loading...', link:'google.com'}],[{title:'Loading...', link:'google.com'}]]);
     //initializing a hook to allow for conditional rendering
     const [tabs, tabsChange] = useState(1)
 
@@ -57,7 +57,6 @@ const NewsContainer = () => {
                     <div value="LA Times" onClick={()=>tabsChange(3)}/>
                 </div>
             </div>
-            <h2>News</h2>
             {newsTab}
         </div>
      );
