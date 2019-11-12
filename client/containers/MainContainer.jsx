@@ -37,7 +37,7 @@ const MainContainer = () => {
         console.log(err)
     })
 },[])
-
+    //easter egg for sandstorm- just need to click the fire icon
     const Easteregg = () => {
       const audio = new Audio(
         'https://iringtone.net/rington/file?id=8454&type=sound&name=mp3'
