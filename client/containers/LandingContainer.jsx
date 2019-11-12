@@ -11,8 +11,10 @@ const LandingContainer = (props) => {
     return ( 
         <div id="landing">
             <div id="landingInfo">
-                <h2>Verifire: Keep Up With The Heat</h2>
-                <p>Keep up with all the news, know your coverage, and stay connected</p>
+
+                <h2>Verifire:</h2>
+                <span>Keep Up With The Heat</span>
+                <p>Stay updated, know your coverage, and keep connected</p>
             </div>
             <div id="particles">
             <Particles
@@ -45,19 +47,19 @@ const LandingContainer = (props) => {
                     },
                     "polygon": {
                         "enable": true,
-                        "scale": 0.6,
-                        "type": "inside",
+                        "scale": 0.55,
+                        "type": "inline",
                         "move": {
                             "radius": 5
                         },
-                        "url":"client/assets/flare.svg" ,
+                        "url":"/flare",
                         "inline": {
                             "arrangement": "equidistant"
                         },
                         "draw": {
                             "enable": false,
                             "stroke": {
-                                "color": "rgba(255, 255, 255, .2)"
+                                "color": "rgba(0, 0, 0, .2)"
                             }
                         }
                     },

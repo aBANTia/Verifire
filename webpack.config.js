@@ -21,14 +21,19 @@ module.exports = {
             {
                 test: /\.(s*)css$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
-            }
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: ['file-loader'],
+            },
         ]
     },
     devServer: {
         publicPath: '/build',
         proxy: {
-            // '/': 'http://localhost:3000',
-            // '/placeholder': 'http://localhost:3000/placeholder'
+            '/': 'http://localhost:3000',
+            '/news': 'http://localhost:3000/news',
+            '/messages': 'http://localhost:3000/messages'
         }   
     }
 }

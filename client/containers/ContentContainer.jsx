@@ -5,11 +5,12 @@ import NewsContainer from './NewsContainer.jsx';
 import SocialContainer from './SocialContainer.jsx';
 
 //This container was made to be a routing point from the main landing page
+//This is also useful for styling all the pieces together
 
-const ContentContainer = () => {
+const ContentContainer = ({news}) => {
     return ( 
         <div id="content">
-            <NewsContainer/>
+            <NewsContainer news={news}/>
             <SocialContainer/>
             <MapsContainer/>
             <MessagesContainer/>

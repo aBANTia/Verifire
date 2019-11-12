@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ContentContainer from './ContentContainer.jsx';
 import LandingContainer from './LandingContainer.jsx';
 
@@ -22,6 +22,21 @@ import {
 
 
 const MainContainer = () => {
+  //instantiating hook in this component so that the fetch occurs earlier
+  const [news, newsUpdate] = useState([[{title:'Loading...', link:'#'}],[{title:'Loading...', link:'#'}],[{title:'Loading...', link:'#'}]]);
+  
+  // upon rendering, the fetch will occur and the hook 'newsUpdate' should update the state
+  useEffect(() => {
+    fetch('/news')
+    .then(resp => {
+        return resp.json()})
+    .then(data => {
+        newsUpdate([...data])
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+},[])
 
     return ( 
         <article id ="mainContainer">
@@ -30,7 +45,7 @@ const MainContainer = () => {
                 <Navbar.Brand>
                 <img
                     alt=""
-                    src="https://www.clipartwiki.com/clipimg/detail/120-1200936_fire-clipart-safty-transparent-background-animated-fire.png"
+                    src="http://www.clker.com/cliparts/P/r/s/n/g/W/maron-flame-logo-4.svg"
                     width="30"
                     height="30"
                     className="d-inline-block align-top"
@@ -41,7 +56,7 @@ const MainContainer = () => {
             </Navbar>
             <Switch>
           <Route path="/main">
-            <ContentContainer/>
+            <ContentContainer news={news}/>
           </Route>
           <Route path="/">
             <LandingContainer/>
