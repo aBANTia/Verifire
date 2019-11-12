@@ -9,6 +9,8 @@
 }
 
 .tabs {
+    background-color: #343a40;
+    border-radius: 5px 5px 0 0;
     display: flex;
     height: 25px;
     padding-right: 30px;
@@ -20,6 +22,7 @@
 
 .tab-text {
   color: whitesmoke;
+  padding-left: 5px;
 }
 .tabs:hover {
     background: lightcoral;
@@ -31,6 +34,9 @@
 }
 
 .news {
+    background-color: #343a40;
+    border-radius: 0 5px 5px 5px;
+    border:black solid 1px;
     display: flex;
     flex-direction: column;
     overflow: auto;
@@ -155,9 +161,9 @@ hr {
     width: 100vw;
     padding-top: 30px;
     #news {
-        background: #343a40;
-        border-radius: 5px;
-        border:black solid 1px;
+        // background: #343a40;
+        // border-radius: 5px;
+        // border:black solid 1px;
         margin-right: 30px;
         grid-column-start: 2;
         grid-column-end: 7;
