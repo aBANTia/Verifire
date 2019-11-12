@@ -21,7 +21,7 @@ app.get('/main', (req, res) => {
 
 // Serve Particle SVG
 app.get('/flare', (req, res) => {
-    res.status(200).sendFile(path.join(__dirname, '../client/assets/flare.svg'));
+    res.status(200).sendFile(path.join(__dirname, '../client/assets/flame.svg'));
 });
 // '/news' route will respond with a nested array of arrays,
     //each nested array contains scraped data from sources LAFD, LA Times, and Youtube (respectively)
