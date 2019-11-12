@@ -45,7 +45,7 @@ const MainContainer = () => {
                 <Navbar.Brand>
                 <img
                     alt=""
-                    src="https://www.clipartwiki.com/clipimg/detail/120-1200936_fire-clipart-safty-transparent-background-animated-fire.png"
+                    src="http://www.clker.com/cliparts/P/r/s/n/g/W/maron-flame-logo-4.svg"
                     width="30"
                     height="30"
                     className="d-inline-block align-top"

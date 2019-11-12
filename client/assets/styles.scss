@@ -3,6 +3,11 @@
     display: flex;
 }
 
+.navbar {
+  position: absolute;
+  width: 100%;
+}
+
 .tabs {
     display: flex;
     height: 25px;
@@ -13,8 +18,12 @@
     }
 }
 
+.tab-text {
+  color: whitesmoke;
+}
 .tabs:hover {
     background: lightcoral;
+    cursor: pointer;
   }
 
 .logos {
@@ -99,7 +108,7 @@ hr {
 //landing page styles
 #landing {
     display:flex;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     background: linear-gradient(135deg, #fdc830, #f37335);
     align-items: center;
@@ -141,8 +150,9 @@ hr {
     display: grid;
     grid-template-columns: 40px repeat(8, 2fr) 40px;
     grid-template-rows: 40px repeat(8, 2fr) 40px;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
+    padding-top: 30px;
     #news {
         background: #343a40;
         border-radius: 5px;
