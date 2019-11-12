@@ -11,7 +11,10 @@ const News1 = ({news}) => {
     const articles = news[0].map((el, i) => {
         return (
             <React.Fragment>
-                <a className="newsEntry" key={i} href={el.link}>{el.title}</a>
+                <article className="pair">
+                    <img className="picture" src={el.picture}/>
+                    <a className="newsEntry" key={i} href={el.link}>{el.title}</a>
+                </article>
                 <hr/>
             </React.Fragment>)
     })

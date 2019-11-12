@@ -12,20 +12,33 @@
 //NewsContianer styling
 #tabs {
     display: flex;
-    height: 50px;
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
 }
 
 .tabs {
     display: flex;
-    height: 50px;
+    height: 25px;
+    padding-right: 30px;
+    border-right: solid orange 1px;
+    div {
+        color: white;
+    }
 }
 
 .tab-text {
   color: whitesmoke;
 }
+.tabs:hover {
+    background: lightcoral;
+    cursor: pointer;
+  }
 
 .logos {
-    width: 50px;
+    width: 25px;
 }
 
 .news {
@@ -34,8 +47,21 @@
     overflow: auto;
 }
 
+.pair {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.picture {
+   height: 100px;
+   width: 100px;
+   margin-left: 10px;
+}
+
 .newsEntry {
-    color: whitesmoke
+    color: whitesmoke;
+    padding: 10px;
 }
 
 hr {
@@ -68,7 +94,7 @@ hr {
 //landing page styles
 #landing {
     display:flex;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     background: linear-gradient(135deg, #fdc830, #f37335);
     align-items: center;
@@ -110,8 +136,9 @@ hr {
     display: grid;
     grid-template-columns: 40px repeat(8, 2fr) 40px;
     grid-template-rows: 40px repeat(8, 2fr) 40px;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
+    padding-top: 30px;
     #news {
         background: #343a40;
         border-radius: 5px;
