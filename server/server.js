@@ -14,6 +14,11 @@ app.get('/', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, '../index.html'));
 });
 
+//'/main' route redirect
+app.get('/main', (req, res) => {
+  res.redirect('/')
+});
+
 // Serve Particle SVG
 app.get('/flare', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, '../client/assets/flare.svg'));
@@ -28,7 +33,6 @@ app.get('/flare', (req, res) => {
     // ]
 
 app.get('/news', newsController.getNews, (req, res) => {
-  console.log("news route sending data")
   res.status(200).json(res.locals.allNews);
 });
 // '/alerts' route will respond with an array of alerts from LAFD: {title: 'Alert', link: 'www.alertLink.com'}
@@ -45,7 +49,7 @@ app.get('/messages', messageController.getMessages, (req, res) => {
   res.json(res.locals.messages);
 })
 //post the messages to the database
-app.post('/messages', messageController.postMessages, (req, res) => {
+app.post('/messages/create', messageController.postMessages, (req, res) => {
   res.json(res.locals.message);
 })
 //chat end
