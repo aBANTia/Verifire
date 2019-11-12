@@ -14,7 +14,6 @@ const Social = (props) => {
             return res.json();
         })
         .then(res => {
-            console.log(res)
             socialUpdate([...res])
         })
     }, []);
@@ -22,14 +21,14 @@ const Social = (props) => {
 
     // Map incoming alerts to anchor tags
     const alerts = social.map((el, i) => {
-        return <a key={i} href={el.link}>{el.title}</a>
+        return <a key={i} className="alertEntry" href={el.link}>{el.title}</a>
     })
 
     // Spread anchor tags to fill module
     return ( 
-        <div>
+        <React.Fragment>
             {alerts}
-        </div>
+        </React.Fragment>
     );
 }
  
