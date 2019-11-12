@@ -1,17 +1,11 @@
-// // Map
-
-// #map {
-//     height: 600px;
-//     width: 800px;
-// }
-// .map-container {
-//     height: 600px;
-//     width: 800px;
-// }
-
 //NewsContianer styling
 #tabs {
     display: flex;
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
 }
 
 .tabs {
@@ -24,8 +18,12 @@
     }
 }
 
+.tab-text {
+  color: whitesmoke;
+}
 .tabs:hover {
     background: lightcoral;
+    cursor: pointer;
   }
 
 .logos {
@@ -70,6 +68,31 @@ hr {
     flex-direction: column;
 }
 
+//Alerts Styling
+.alerts {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.alertEntry {
+    color: whitesmoke;
+    border: solid 1px;
+    background-color: lightcoral;
+    border-radius: 5px;
+    margin: 5px;
+    width: max-content;
+    padding: 1px;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.alertEntry:hover {
+    color: lightcoral;
+    text-decoration: none;
+    background-color: whitesmoke;
+} 
+
 //MainContainer Styling
 
 .navLinks:hover {
@@ -89,7 +112,7 @@ hr {
 //landing page styles
 #landing {
     display:flex;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     background: linear-gradient(135deg, #fdc830, #f37335);
     align-items: center;
@@ -131,8 +154,9 @@ hr {
     display: grid;
     grid-template-columns: 40px repeat(8, 2fr) 40px;
     grid-template-rows: 40px repeat(8, 2fr) 40px;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
+    padding-top: 30px;
     #news {
         background: #343a40;
         border-radius: 5px;
@@ -184,5 +208,32 @@ hr {
     p {
         color: white;
     }
+}
+
+=======
+// Scroll Bars
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: whitesmoke; 
+    border: solid, 1px, whitesmoke;
+    border-radius: 100px;
+    margin: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: lightcoral;
+    border: solid, 1px, lightcoral;
+    border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: coral; 
 }
 
