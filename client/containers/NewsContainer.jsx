@@ -24,7 +24,7 @@ const NewsContainer = ({news}) => {
     if (tabs === 3) {
         newsTab = <News3 news={news}/>
     }
-
+    
     //splitting up the different components to be flipped through
     //made tabs and images that are both clickable to alter state that renders different components
     return ( 

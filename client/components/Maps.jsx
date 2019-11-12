@@ -16,8 +16,8 @@ const Maps = (props) => {
             // layers: 'flat,chlo-modis,interstates,counties,heat-index:60,admin-cities,fires-obs-icons',
             layers: 'heat-index:60,fires-obs-icons',
             timeline: {
-                from: -2 * 3600, // seconds
-                to: 0 * 3600
+                from: -48 * 3600, // seconds
+                to: -42 * 3600
             }
             // timeline: {
             //     from: -24 * 3600, // seconds
