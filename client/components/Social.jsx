@@ -15,7 +15,6 @@ const Social = (props) => {
             return res.json();
         })
         .then(res => {
-            console.log(res)
             socialUpdate([...res])
         })
     }, []);

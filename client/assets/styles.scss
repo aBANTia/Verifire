@@ -81,6 +81,10 @@ hr {
     color: white;
 }
 
+.navbar {
+    box-shadow: black 0px 5px 10px;
+}
+
 
 //landing page styles
 #landing {
@@ -169,5 +173,16 @@ hr {
         grid-row-end: 10;
     }
 
+}
+
+//messages styling
+
+#messages {
+    display:flex;
+    flex-direction: column;
+    overflow: auto;
+    p {
+        color: white;
+    }
 }
 

@@ -7,7 +7,6 @@ const News1 = ({news}) => {
     //Access the data from the information scraped, into the first category of information
     //this should be from one site
     //we map these into an array as <a> tags so we can click them and be redirected to the respective sites
-    console.log(news)
     const articles = news[0].map((el, i) => {
         return (
             <React.Fragment>
