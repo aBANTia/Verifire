@@ -23,7 +23,7 @@ import {
 
 const MainContainer = () => {
   //instantiating hook in this component so that the fetch occurs earlier
-  const [news, newsUpdate] = useState([[{title:'Loading...', link:'google.com'}],[{title:'Loading...', link:'google.com'}],[{title:'Loading...', link:'google.com'}]]);
+  const [news, newsUpdate] = useState([[{title:'Loading...', link:'#'}],[{title:'Loading...', link:'#'}],[{title:'Loading...', link:'#'}]]);
   
   // upon rendering, the fetch will occur and the hook 'newsUpdate' should update the state
   useEffect(() => {
