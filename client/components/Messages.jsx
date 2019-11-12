@@ -11,13 +11,16 @@ const Messages = (props) => {
 
     //This hook was built to receive and show messages
     const [messages, setMessages]= useState([{message: 'message'}])
+    //this hook was built to take in user input and utilize it to show messages sent
     const [input, setInput]= useState('')
 
     const displayMessage = messages.map((el, i) => {
         return <p key={i}>{el.message}</p>
     })
 
+    //use effects mimics lifecycle methods, the second parameter being an empty array mimics componentDidMount
     useEffect(() => {
+        //this is used to fetch the message from the database
         fetch('/messages')
         .then(resp => {
             return resp.json()
@@ -30,6 +33,8 @@ const Messages = (props) => {
         })
     }, [])
 
+    //hooks are simplified by making methods with hooks built into them
+    //Think of the method that is paired in the hook ('setInput') here as another form of this.setState
     const handleType = e => {
         setInput(e.target.value)
     };
