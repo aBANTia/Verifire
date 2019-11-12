@@ -22,7 +22,7 @@ const LandingContainer = (props) => {
                     "fps_limit": 60,
                     "particles": {
                         "number": {
-                            "value": 400,
+                            "value": 600,
                             "density": {
                                 "enable": false
                             }
@@ -48,7 +48,7 @@ const LandingContainer = (props) => {
                     "polygon": {
                         "enable": true,
                         "scale": 0.55,
-                        "type": "inside",
+                        "type": "inline",
                         "move": {
                             "radius": 5
                         },
@@ -59,7 +59,7 @@ const LandingContainer = (props) => {
                         "draw": {
                             "enable": false,
                             "stroke": {
-                                "color": "rgba(255, 255, 255, .2)"
+                                "color": "rgba(0, 0, 0, .2)"
                             }
                         }
                     },
