@@ -19,19 +19,24 @@ const LandingContainer = (props) => {
             <div id="particles">
             <Particles
                 params={{
+                    // Maximum Frames Per Second
                     "fps_limit": 60,
                     "particles": {
                         "number": {
+                            // Number of Particles
                             "value": 600,
                             "density": {
                                 "enable": false
                             }
                         },
+                        // Lines between Particles
                         "line_linked": {
                             "enable": true,
+                            // Maximum Distance that Particles will attach to each other
                             "distance": 20,
                             "opacity": 0.4
                         },
+                        // Movement Speed of the Particles
                         "move": {
                             "speed": 10
                         },
@@ -47,11 +52,18 @@ const LandingContainer = (props) => {
                     },
                     "polygon": {
                         "enable": true,
+                        // Size of your mask
                         "scale": 0.55,
+                        // Type can be:
+                        // inline(particles on the lines of your mask),
+                        // inside(particles inside the lines of your mask[ Will only work on non-curved lines ]),
+                        // outside(particles outside the lines of your mask[ Will only work on non-curved lines ])
                         "type": "inline",
                         "move": {
+                            // How far away from your lines the particles are allowed to venture out
                             "radius": 5
                         },
+                        // Url for mask, here we are routing to the backend
                         "url":"/flare",
                         "inline": {
                             "arrangement": "equidistant"
