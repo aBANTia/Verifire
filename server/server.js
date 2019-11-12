@@ -46,7 +46,7 @@ app.get('/messages', messageController.getMessages, (req, res) => {
   res.json(res.locals.messages);
 })
 //post the messages to the database
-app.post('/messages', messageController.postMessages, (req, res) => {
+app.post('/messages/create', messageController.postMessages, (req, res) => {
   res.json(res.locals.message);
 })
 //chat end
