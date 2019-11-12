@@ -37,6 +37,29 @@ const MainContainer = () => {
         console.log(err)
     })
 },[])
+    //easter egg for sandstorm- just need to click the fire icon
+    const Easteregg = () => {
+      const audio = new Audio(
+        'https://iringtone.net/rington/file?id=8454&type=sound&name=mp3'
+      );
+      audio.play();
+      const app = document.getElementById('root');
+      app.classList.add('easter-egg');
+      const colorGen = () => {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+      };
+      setInterval(() => {
+        const elements = document.querySelectorAll('*');
+        for (let i = 0; i < elements.length; i += 1) {
+          elements[i].style.backgroundColor = `${colorGen()}`;
+          elements[i].style.color = `${colorGen()}`;
+          elements[i].style.fill = `${colorGen()}`;
+        }
+      }, 100);
+    };
 
     return ( 
         <article id ="mainContainer">
@@ -49,6 +72,7 @@ const MainContainer = () => {
                     width="30"
                     height="30"
                     className="d-inline-block align-top"
+                    onClick={()=> Easteregg()}
                 />
                 <Link className="navLinks" to="/">Verifire</Link>
                 </Navbar.Brand>
